@@ -7,6 +7,13 @@ $container['view'] = function ($c) {
     return new \Slim\Views\PhpRenderer($path);
 };
 
+$container['notFoundHandler'] = function ($c) {
+  return function ($request, $response) use ($c) {
+    $app = new App\Action\ErrorAction($c->get('view'), $c->get('settings'));
+    return $app->Error404($request, $response);
+  };
+};
+
 
 // Action Factories
 $container['App\Action\HomeAction'] = function ($c) {

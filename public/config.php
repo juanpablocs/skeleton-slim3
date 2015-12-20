@@ -1,17 +1,17 @@
 <?php
 return [
     'settings' => [
-        // View settings
+        // path views
         'view'  => 'app/Views/',
+        // mysql access
         'mysql' => [
             'server'  => 'localhost',
             'user'    => 'root',
             'pass'    => '123456',
             'database'=> 'test',
         ],
-        // monolog settings
-        'logger' => [
-            'name' => 'app'
-        ],
+        // seo
+        'seo_title'       => 'Index Principal',
+        'seo_description' => 'Index Principal Description',
     ],
 ];
