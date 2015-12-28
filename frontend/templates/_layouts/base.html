@@ -6,8 +6,14 @@
   <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
 </head>
 <body>
+  
+  {% include '_render/header.html' %}
+  
   {% block content %}
     <p> use block </p>
   {% endblock %}
+  
+  {% include '_render/footer.html' %}
+
 </body>
 </html>
