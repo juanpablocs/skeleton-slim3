@@ -2,9 +2,9 @@ npm-debug.log
 composer.lock
 .phpintel/
 node_modules/
-public/vendor/
+vendor/
+app/Views/*
 public/static/
 public/uploads/
-public/app/Views/*
 .DS_Store
 .idea

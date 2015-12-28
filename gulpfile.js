@@ -22,8 +22,7 @@ gulp.task('stylus', function(){
           import: ['nib']
     }))
     .pipe(gulpConcat('styles.css'))
-    .pipe(gulp.dest('public/static/css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('public/static/css'));
 });
 
 gulp.task('html', function(){
@@ -31,7 +30,7 @@ gulp.task('html', function(){
   return gulp.src(pathHtml)
     .pipe(gulpNunjucks())
     .pipe(gulpHtmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('public/app/Views'));
+    .pipe(gulp.dest('./app/Views'));
 });
 
 gulp.task('default', ['stylus', 'html'], function(){

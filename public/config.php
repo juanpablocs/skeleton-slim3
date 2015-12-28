@@ -2,7 +2,7 @@
 return [
     'settings' => [
         // path views
-        'view'  => 'app/Views/',
+        'view'  => '../app/Views/',
         // mysql access
         'mysql' => [
             'server'  => 'localhost',

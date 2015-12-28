@@ -1,6 +1,6 @@
 {
     "config": {
-        "vendor-dir": "public/vendor"
+        "vendor-dir": "./vendor"
     },
     "name": "root/skeleton-slim3",
     "require": {
@@ -10,9 +10,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "public/app"
+            "App\\": "./app"
         },
-        "files": ["public/app/Libs/Helpers.php"]
+        "files": ["./app/Libs/Helpers.php"]
     },
     "authors": [
         {
