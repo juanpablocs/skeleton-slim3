@@ -1,13 +1,8 @@
 <?php
 namespace App\Action;
 
-final class HomeAction
+final class HomeAction extends BaseAction
 {
-  private $view;
-
-  public function __construct($view){
-    $this->view = $view;
-  }
 
   public function Index($request, $response, $args){
     $args['seo_title'] = 'Title Index';

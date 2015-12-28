@@ -9,13 +9,13 @@ $container['view'] = function ($c) {
 
 $container['notFoundHandler'] = function ($c) {
   return function ($request, $response) use ($c) {
-    $app = new App\Action\ErrorAction($c->get('view'), $c->get('settings'));
+    $app = new App\Action\ErrorAction($c);
     return $app->Error404($request, $response);
   };
 };
 
 
 // Action Factories
-$container['App\Action\HomeAction'] = function ($c) {
-    return new App\Action\HomeAction($c->get('view'));
+$container['App\Action\BaseAction'] = function ($c) {
+    return new App\Action\BaseAction($c);
 };

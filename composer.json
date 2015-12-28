@@ -5,9 +5,7 @@
     "name": "root/skeleton-slim3",
     "require": {
         "slim/slim": "^3.0",
-        "facebook/php-sdk-v4": "~4.0",
         "j4mie/idiorm": "~1.5",
-        "phpmailer/phpmailer": "dev-master",
         "slim/php-view": "^2.0"
     },
     "autoload": {

@@ -1,15 +1,8 @@
 <?php
 namespace App\Action;
 
-final class ErrorAction
+final class ErrorAction extends BaseAction
 {
-  private $view;
-  private $settings;
-
-  public function __construct($view, $settings){
-    $this->view = $view;
-    $this->settings = $settings;
-  }
 
   public function Error404($request, $response){
     $args = [];
