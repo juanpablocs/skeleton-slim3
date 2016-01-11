@@ -4,6 +4,7 @@ var gulpStylus    = require('gulp-stylus');
 var gulpConcat    = require('gulp-concat');
 var gulpNunjucks  = require('gulp-nunjucks-render');
 var gulpHtmlmin   = require('gulp-htmlmin');
+var gulpConnectPHP= require('gulp-connect-php');
 var browserSync   = require('browser-sync').create();
 var rupture       = require('rupture');
 var nib           = require('nib');
@@ -14,6 +15,8 @@ var pathHtml = [path + '/templates/*.html', '!' + path + '/templates/_**/*.html'
 var pathHtmlTpl = [path + '/templates/'];
 
 var clear = function(el){ return el.replace('!',''); }
+var portPHP = 8888;
+
 
 gulp.task('stylus', function(){
   return gulp.src(pathStylus)
@@ -34,9 +37,15 @@ gulp.task('html', function(){
 });
 
 gulp.task('default', ['stylus', 'html'], function(){
-  browserSync.init({
-      proxy: 'http://skeleton-slim.perured.pe'
+
+  gulpConnectPHP.server({base:'./public', port:portPHP}, function (){
+
+    browserSync.init({
+      proxy: '127.0.0.1:' + portPHP
+    });
   });
+
+
   gulp.watch(pathStylus.map(clear), ['stylus'])
     .on('change', browserSync.reload);
   gulp.watch(pathHtml.map(clear), ['html'])
