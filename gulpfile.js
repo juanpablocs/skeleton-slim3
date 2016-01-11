@@ -43,6 +43,7 @@ gulp.task('default', ['stylus', 'html'], function(){
     browserSync.init({
       proxy: '127.0.0.1:' + portPHP
     });
+
   });
 
 

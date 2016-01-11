@@ -1,6 +1,6 @@
 ### Skeleton Slim 3 + Gulp ###
 
-el proposito de este proyecto es tener un lienzo limpio para programar y maquetar un proyecto pequeno/mediano, modificar el fichero gulpfile.js y config.php.
+el propósito de este proyecto es tener un lienzo limpio para programar y maquetar un proyecto "pequeño/mediano" teniendo entornos separados para frontend (carpeta frontend/) y backend (carpetas app/ y public/). Modificar el fichero gulpfile.js en caso quiera usar otro puerto para php y también public/config.php.
 
 ejecutar:
 
